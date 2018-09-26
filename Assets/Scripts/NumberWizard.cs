@@ -14,7 +14,7 @@ public class NumberWizard : MonoBehaviour
     {
 
         Debug.Log("Hello Witches and Wizards, I want you to think of a Number between 1 and 1000.. " +
-            "I will guess your number so you can see what an amazing Wizard I am!! So my first guess is " + guess);
+            "I will guess your number so you can see what an amazing Wizard I am!! So my first guess is.. " + guess);
     }
 
     // Update is called once per frame
@@ -27,6 +27,8 @@ public class NumberWizard : MonoBehaviour
         {
             max = guess;
             CalcGuess();
+
+            Debug.Log("Hmmm.. Your number is lower.. My next Spell will help me find it!! So my next guess is.." + guess);
         }
 
 
@@ -34,12 +36,14 @@ public class NumberWizard : MonoBehaviour
         {
             min = guess;
             CalcGuess();
+
+            Debug.Log("Hmmm.. Your number is higher.. My next Spell will help me find it!! So my next guess is.." + guess);
         }
 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("I found it, my Hogwarts Education was worth it!!");
+            Debug.Log("I found it! My Education at Hogwarts was worth it!!!");
         }
 
     }
@@ -48,7 +52,7 @@ public class NumberWizard : MonoBehaviour
     {
         guess = (min + max) / 2;
 
-        Debug.Log("My next guess is " + guess);
+        //Debug.Log("My magical next guess is " + guess);
 
     }
 
