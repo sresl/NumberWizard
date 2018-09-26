@@ -1,7 +1,5 @@
 # NumberWizard
 
------
-
 ## Aufgabenstellung
 
 Consolenspiel für einen Spieler.
